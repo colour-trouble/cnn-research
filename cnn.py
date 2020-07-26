@@ -15,7 +15,7 @@ Process (in order):
 
 1)  Conv2D: 4x4 receptive field, 32 feature maps, ReLU.
     - Output is 32, 25(=28-4+1)x25 pixel images, each with distinct features.
-    - No. parameters = 32 * (4 * 4 + 1) =  544
+    - No. parameters = 32 * (4 * 4 * 1 + 1) =  544
     - Output dim = (None, 25, 25, 32)
 
 2)  Max-pooling: 2x2 pool size, padding uncertained (ASSUMED TO BE VALID).
@@ -27,7 +27,7 @@ Process (in order):
 
 3)  Conv2D: 3x3 receptive field, 32 feature maps, ReLU.
     - Output is 32, 10(=12-3+1)x10 pixel images.
-    - No. parameters = 32 * (3 * 3 + 1) =  320
+    - No. parameters = 32 * (3 * 3 * 32 + 1) =  9248
     - Output dim = (None, 10, 10, 32)
     
 4)  Max-pooling: 2x2 pool size, padding uncertained (ASSUMED TO BE VALID).
