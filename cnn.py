@@ -88,6 +88,9 @@ convnet.add(Dense(10, activation='softmax'))
 # Compile network
 convnet.compile(loss='mean_squared_error', optimizer='sgd', metrics=['accuracy'])
 
+# Get model summary
+print(convnet.summary())
+
 # Train
 convnet.fit(train_samples, c_train_labels, batch_size=32, epochs=20, verbose=1)
 
